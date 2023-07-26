@@ -1,0 +1,3 @@
+[submodule "checkpoints"]
+	path = checkpoints
+	url = https://huggingface.co/datasets/ezipe/cfpi/

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd $(python -c 'import site; print(site.getsitepackages()[0])')/mujoco_py
+rm generated/*.lock

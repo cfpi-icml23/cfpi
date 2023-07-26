@@ -1,0 +1,52 @@
+name: build
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.8"]
+
+    steps:
+      - name: noop
+        run: echo 'done'
+
+      # - uses: actions/checkout@v2
+      # - name: Set up Python ${{ matrix.python-version }}
+      #   uses: actions/setup-python@v2.2.2
+      #   with:
+      #     python-version: ${{ matrix.python-version }}
+
+      # - name: Install poetry
+      #   run: make poetry-download
+
+      # - name: Set up cache
+      #   uses: actions/cache@v2.1.6
+      #   with:
+      #     path: .venv
+      #     key: venv-${{ matrix.python-version }}-${{ hashFiles('pyproject.toml') }}-${{ hashFiles('poetry.lock') }}
+      # - name: Install dependencies # TODO fix
+      #   run: |
+      #     poetry config virtualenvs.in-project true
+      #     pip install swig numpy==1.24.4 patchelf "cython<3" lockfile
+      #     pip install mujoco-py==1.50.1.68
+      #     poetry install
+
+      # - name: Run style checks
+      #   run: |
+      #     make check-codestyle
+
+      # - name: Run tests
+      #   run: |
+      #     make test
+
+      # - name: Publish
+      #   continue-on-error: true
+      #   run: |
+      #     poetry publish --build -u ezipe -p ${{ secrets.PYPI_PASSWORD }}
+
+    # - name: Run safety checks
+    #   run: |
+    #     make check-safety
