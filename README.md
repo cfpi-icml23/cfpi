@@ -376,6 +376,10 @@ Building a new version of the application contains steps:
 - Add support for deterministic CFPI
 - Add support for VAE-CFPI
 
+## Lines of Code
+
+![image](https://github.com/cfpi-icml23/cfpi/assets/54998055/21be945c-f271-49ea-99ca-822b5a3c58e4)
+
 ## 🛡 License
 
 [![License](https://img.shields.io/github/license/ezhang7423/cfpi)](https://github.com/ezhang7423/cfpi/blob/master/LICENSE)
